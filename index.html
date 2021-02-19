@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Postmaster</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container my-3">
+        <h1>Welcome to Postmaster</h1>
+        <div class="mb-3 row">
+            <label for="inputPassword" class="col-sm-2 col-form-label">URL</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="url">
+            </div>
+        </div>
+        <div class="my-2">
+            <h3>Select your request type</h3>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="requestType" id="post" value="POST" checked>
+            <label class="form-check-label" for="post">
+                POST
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="requestType" id="get" value="GET">
+            <label class="form-check-label" for="get">
+                GET
+            </label>
+        </div>
+
+
+
+        <div class="my-2">
+            <h3>Select your Content type</h3>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="contentType" id="jsonRadio" value="json" checked>
+            <label class="form-check-label" for="json">
+                JSON
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="contentType" id="parameterRadio" value="parameter">
+            <label class="form-check-label" for="parameter">
+                Parameter
+            </label>
+        </div>
+
+        <div id="parametersBox">
+            <div class="form-row">
+                <label for="url" class="col-sm-2 col-form-label">Parameter 1</label>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" id="parameterKey1" placeholder="Enter Parameter 1 Key">
+                </div>
+                
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" id="parameterValue1"
+                            placeholder="Enter Parameter 1 Value">
+                    </div>
+                    <!-- <button class="btn btn-primary deleteParam">-</button> -->
+                
+                <div id="extraParams"></div>
+
+                <button id="addParam" class="btn btn-primary">+</button>
+            </div>
+            <div id="params"></div>
+        </div>
+
+
+
+        <div class="my-3" id="requestJsonBox">
+            <div class="form-group row">
+                <label for="requestJsonText" class="col-sm-2 col-form-label">Enter Request Json</label>
+                <div class="col-sm-10">
+                    <textarea class="form-control" id="requestJsonText" rows="3"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group row my-2">
+            <div class="col-sm-10">
+                <button id="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+
+        <div class="my-3" id="responseJsonBox">
+            <div class="form-group row">
+                <label for="responseJsonText" class="col-sm-2 col-form-label">Response</label>
+                <div class="col-sm-10">
+                    <textarea class="form-control" id="responseJsonText" rows="3"
+                        placeholder="Your response will appear here"></textarea>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+
+    <script src="index.js"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
