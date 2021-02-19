@@ -8,7 +8,7 @@ let parameterRadio = document.getElementById("parameterRadio");
 let requestJsonBox = document.getElementById("requestJsonBox");
 let parametersBox = document.getElementById("parametersBox");
 
-requestJsonBox.style.display = "none";
+requestJsonBox.style.display = "block";
 parametersBox.style.display = "none";
 
 jsonRadio.addEventListener("click", () => {
